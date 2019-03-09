@@ -26,4 +26,9 @@ public class UserDetailController {
 		return userdetailRepository.findAll();
 	}
 	
+	@GetMapping("/test")
+	public String test(){
+		return "Hello World";
+	}	
+	
 }
