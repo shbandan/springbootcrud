@@ -1,6 +1,7 @@
 package com.demo;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -37,4 +38,8 @@ public class UserDetailController {
 		
 	}
 	
+	@GetMapping("/config")
+	public Map<String, String> getConfig() {
+		return System.getenv();
+	}
 }
